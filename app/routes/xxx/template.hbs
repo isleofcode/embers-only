@@ -5,9 +5,15 @@
 
   <img src={{xxxImageUrl}}>
 
-  <button {{action (route-action 'loadMoreXxx')}}
+  <button {{action (route-action 'loadRegularChoose')}}
     disabled={{if isFetchingImage 'true' null}}>
 
-    more xxx plz
+    just xxx plz
+  </button>
+
+  <button {{action (route-action 'loadEightInchChoose')}}
+    disabled={{if isFetchingImage 'true' null}}>
+
+    xxx w/8" choose
   </button>
 </box>
