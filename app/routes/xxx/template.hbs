@@ -1,0 +1,21 @@
+<box fit vertical
+  class='content-xxx'
+  align='center'
+  justify='center'>
+
+  <hbox align='center'>
+    <img src={{xxxImageUrl}}>
+  </hbox>
+
+  <button {{action (route-action 'loadRegularChoose')}}
+    disabled={{if isFetchingImage 'true' null}}>
+
+    more w/platform choose
+  </button>
+
+  <button {{action (route-action 'loadEightInchChoose')}}
+    disabled={{if isFetchingImage 'true' null}}>
+
+    more w/8" platform choose
+  </button>
+</box>

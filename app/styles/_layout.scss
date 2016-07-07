@@ -1,0 +1,43 @@
+html {
+  font-size: $FONT_SIZE;
+}
+
+body {
+  margin: 0;
+}
+
+page {
+  background: $COLOR_CREAM;
+}
+
+.header {
+  width: 100%;
+  background: $COLOR_RED;
+  text-align: center;
+
+  color: white;
+
+  a {
+    color: white;
+    &:hover { color: $COLOR_GREY; }
+  }
+
+  h1 {
+    &:hover { @include animation(spin ease-in-out 1.0s alternate infinite); }
+  }
+
+  h2 {
+    margin-left: 25%;
+    margin-right: 25%;
+    @include animation(blink 1s steps(5, start) infinite);
+  }
+}
+
+.content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+button {
+  font-size: 1rem;
+}

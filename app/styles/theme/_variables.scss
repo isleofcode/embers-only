@@ -1,0 +1,15 @@
+$FONT_FAMILY: -apple-system, "helvetica neue", "helvetica", "open sans", sans-serif;
+$FONT_SIZE: 16px;
+
+$COLOR_CREAM: rgb(255,255,204);
+$COLOR_GREY: rgb(201,201,201);
+$COLOR_RED: rgb(190,37,13);
+
+@include keyframes(spin) {
+  from { @include transform(rotateY(0deg)); }
+  to { @include transform(rotateY(180deg)); }
+}
+
+@include keyframes(blink) {
+  to { visibility: hidden; }
+}

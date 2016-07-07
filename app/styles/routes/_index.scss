@@ -1,0 +1,7 @@
+.content-index {
+  > * ~ * { margin-top: 1rem; }
+
+  img {
+    max-height: 30rem;
+  }
+}
