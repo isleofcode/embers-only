@@ -57,7 +57,7 @@
       "electron.js",
       "package.json"
     ],
-    "name": null,
+    "name": "embers only",
     "platform": null,
     "arch": null,
     "version": null,
@@ -65,7 +65,7 @@
     "app-category-type": null,
     "app-copyright": null,
     "app-version": null,
-    "asar": null,
+    "asar": true,
     "asar-unpack": null,
     "asar-unpack-dir": null,
     "build-version": null,

@@ -6,7 +6,7 @@ module.exports = function(environment) {
     podModulePrefix: 'embers-only/routes',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: process.env.EMBER_CLI_ELECTRON ? 'hash' : 'auto',
     EmberENV: {
       FEATURES: { }
     },
