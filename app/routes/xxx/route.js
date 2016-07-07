@@ -1,9 +1,10 @@
 import Ember from 'ember';
-import fetch from "ember-network/fetch";
+import fetch from 'ember-network/fetch';
 
 const {
   Route,
-  RSVP
+  RSVP,
+  inject
 } = Ember;
 
 const GIPHY_RANDOM_URL_BASE = 'https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC';
@@ -13,6 +14,8 @@ const GIPHY_QUERY_PARAMS = {
 };
 
 export default Route.extend({
+  platformChoose: inject.service('platform-choose'),
+
   model() {
     return RSVP.hash({
       isFetchingImage: false,
@@ -43,19 +46,35 @@ export default Route.extend({
   },
 
   actions: {
-    loadMoreXxx() {
-      this.set('controller.isFetchingImage', true);
+    loadRegularChoose() {
+      let promiseFn = this.get('platformChoose').regularChoose;
+      this.tryMoreXxx(promiseFn);
+    },
 
-      this.fetchXxxGiphyImage(GIPHY_QUERY_PARAMS)
-        .then(imageUrl => {
-          this.set('controller.xxxImageUrl', imageUrl);
-        })
-        .catch(() => {
-          alert('xxx overload');
-        })
-        .finally(() => {
-          this.set('controller.isFetchingImage', false);
-        });
+    loadEightInchChoose() {
+      let promiseFn = this.get('platformChoose').eightInchChoose;
+      this.tryMoreXxx(promiseFn);
     }
+  },
+
+  tryMoreXxx(promiseFn) {
+    this.set('controller.isFetchingImage', true);
+
+    promiseFn()
+      .then(this._loadMoreXxx.bind(this))
+      .catch(alert)
+      .finally(() => {
+        this.set('controller.isFetchingImage', false);
+      });
+  },
+
+  _loadMoreXxx() {
+    return this.fetchXxxGiphyImage(GIPHY_QUERY_PARAMS)
+      .then(imageUrl => {
+        this.set('controller.xxxImageUrl', imageUrl);
+      })
+      .catch(() => {
+        alert('xxx overload');
+      });
   }
 });

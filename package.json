@@ -51,6 +51,9 @@
     "liquid-fire": "0.23.1",
     "loader.js": "^4.0.1"
   },
+  "dependencies": {
+    "platform-choose": "file:lib/platform-choose"
+  },
   "main": "electron.js",
   "ember-electron": {
     "copy-files": [
