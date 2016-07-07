@@ -6,7 +6,7 @@ const {
   RSVP
 } = Ember;
 
-const GIPHY_RANDOM_URL_BASE = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC';
+const GIPHY_RANDOM_URL_BASE = 'https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC';
 const GIPHY_QUERY_PARAMS = {
   tag: '"vin diesel" "xxx"',
   rating: 'g'
