@@ -1,0 +1,9 @@
+<hbox fit vertical align='center' justify='center'>
+  <img src={{xxxImageUrl}} style='height: 300px'>
+
+  <button {{action (route-action 'loadMoreXxx')}}
+    disabled={{if isFetchingImage 'true' null}}>
+
+    more xxx plz
+  </button>
+</hbox>
