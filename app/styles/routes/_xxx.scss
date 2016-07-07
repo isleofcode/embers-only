@@ -1,7 +1,13 @@
 .content-xxx {
   > * ~ * { margin-top: 1rem; }
 
-  img {
+  hbox {
     height: 30rem;
+    background: $COLOR_GREY;
+    border: 1em solid $COLOR_GREY;
+  }
+
+  img {
+    max-width: 100%;
   }
 }

@@ -3,7 +3,9 @@
   align='center'
   justify='center'>
 
-  <img src={{xxxImageUrl}}>
+  <hbox align='center'>
+    <img src={{xxxImageUrl}}>
+  </hbox>
 
   <button {{action (route-action 'loadRegularChoose')}}
     disabled={{if isFetchingImage 'true' null}}>
