@@ -1,0 +1,7 @@
+.content-xxx {
+  > * ~ * { margin-top: 1rem; }
+
+  img {
+    height: 30rem;
+  }
+}
