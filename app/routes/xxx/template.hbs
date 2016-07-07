@@ -1,9 +1,13 @@
-<hbox fit vertical align='center' justify='center'>
-  <img src={{xxxImageUrl}} style='height: 300px'>
+<box fit vertical
+  class='content-xxx'
+  align='center'
+  justify='center'>
+
+  <img src={{xxxImageUrl}}>
 
   <button {{action (route-action 'loadMoreXxx')}}
     disabled={{if isFetchingImage 'true' null}}>
 
     more xxx plz
   </button>
-</hbox>
+</box>

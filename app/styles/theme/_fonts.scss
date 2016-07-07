@@ -1,0 +1,18 @@
+html {
+  font-size: $FONT_SIZE;
+  font-family: $FONT_FAMILY;
+  font: -apple-system-body !important;
+}
+
+.header {
+  color: white;
+
+  a {
+    color: white;
+    &:hover { color: $COLOR_GREY; }
+  }
+}
+
+button {
+  font-size: 1rem;
+}

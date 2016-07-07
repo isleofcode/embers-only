@@ -1,13 +1,21 @@
 <screen>
-  <page>
+  <page align='center'>
+    <div class='header'>
+      <h1 class='tk-chuck'>
+        {{link-to 'embers only' 'index'}}
+      </h1>
+
+      <h2>
+        <marquee>your source for xxx action bubbling!!!</marquee>
+      </h2>
+    </div>
+
     <box fit vertical
+      class='content'
       align='center'
-      justify='center'>
+      xs='10' sm='8' md='6' lg='4'>
 
-      <h1>{{link-to 'embers-only' 'index'}}</h1>
-      <h2>your source for xxx action bubbling</h2>
+      {{outlet}}
     </box>
-
-    {{outlet}}
   </page>
 </screen>
