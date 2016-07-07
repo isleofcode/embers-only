@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'embers-only',
+    podModulePrefix: 'embers-only/routes',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
